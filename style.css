@@ -20,7 +20,11 @@
     box-sizing: border-box;
 }
 
-
+/*.wrapper{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*}*/
 
 a {
     text-decoration: none;
@@ -119,6 +123,17 @@ header {
     gap: 20px;
 }
 
+.find_container-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+}
 
 .up_img{
     display: flex;
@@ -309,6 +324,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 30px;
 }
 
 .comfort-content{
@@ -371,6 +387,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 130px;
+    gap: 30px;
 }
 
 .quick_and_easy-sign{
@@ -456,7 +473,7 @@ header {
 
 .example_table{
     display: grid;
-    grid-template-columns: repeat(3, 405px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     grid-gap: 30px;
     margin-bottom: 80px;
@@ -540,7 +557,7 @@ header {
 
 .locations-table{
     display: grid;
-    grid-template-columns: repeat(3, 415px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     justify-items: center;
     margin-bottom: 80px;
@@ -603,7 +620,7 @@ header {
     color: #FFFFFF;
 }
 
-.big_card-description{
+.big_card-description {
     font: 400 18px 'Roboto', sans-serif;
     max-width: 765px;
     text-align: center;
@@ -618,4 +635,178 @@ header {
     border: none;
     width: 135px;
     height: 50px;
+}
+
+.reviews_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 130px;
+}
+
+.reviews_header{
+    margin-top: 160px;
+    font: 700 48px 'Roboto', sans-serif;
+    margin-bottom: 25px;
+}
+
+.reviews_table{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.reviews_stars{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+.reviews_description{
+    font: 400 18px 'Roboto', sans-serif;
+    color: #65665C;
+    margin-bottom: 80px;
+}
+
+.reviews_card-description{
+    font: 400 18px 'Roboto', sans-serif;
+    max-width: 340px;
+    margin-left: 20px;
+}
+
+.reviews_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 405px;
+    height: 325px;
+    box-shadow: 1px 1px 1px #E7E8E3;
+    border-radius: 16px;
+    border: 1px solid #E7E8E3;
+}
+
+.customer_info{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.blog_section{
+    background: #F5F5F2;
+}
+
+.blog_sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 14px 'Roboto', sans-serif;
+    background: #E7E8E3;
+    border-radius: 32px;
+    width: 50px;
+    height: 30px;
+}
+
+.blog_header{
+    font: 700 48px 'Roboto', sans-serif;
+}
+
+.blog_card{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    max-width: 405px;
+    height: 503px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px #E7E8E3;
+}
+
+.blog-table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card_sign{
+    font: 400 14px 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FAE8E1;
+    border-radius: 32px;
+    width: 60px;
+    height: 30px;
+}
+
+.card_date{
+    font: 400 14px 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.blog_card-header{
+    font: 700 24px 'Roboto', sans-serif;
+}
+
+.blog_card-info{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.card_description{
+    font: 400 16px 'Roboto', sans-serif;
+    color: #65665C;
+    max-width: 320px;
+}
+
+.blog-naming{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    margin-left: 55px;
+}
+
+.blog_description{
+    font: 400 18px 'Roboto', sans-serif;
+    color: #65665C;
+    max-width: 710px;
+}
+
+.margin{
+    padding-top: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.view_button{
+    font: 400 16px 'Roboto', sans-serif;
+    height: 50px;
+    width: 110px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #E7E8E3;
+    box-shadow: 1px 1px 2px #E7E8E3;
+    margin-right: 55px;
+    margin-bottom: 10px;
+}
+
+.block_button{
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }

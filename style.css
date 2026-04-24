@@ -21,6 +21,7 @@
 }
 
 .wrapper{
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -785,8 +786,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 200px;
+    padding-top: 80px;
     margin-left: 55px;
+    margin-top: 50px;
 }
 
 .blog_description{
@@ -826,8 +828,8 @@ header {
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
+    margin-bottom: 50px;
 }
-
 
 .footer_info{
     display: flex;
@@ -845,10 +847,6 @@ header {
 .footer_description{
     font: 400 16px 'Roboto', sans-serif;
     color: #65665C;
-}
-
-.footer_input{
-
 }
 
 
@@ -902,7 +900,22 @@ header {
 }
 
 
+
+@media (max-width: 810px){
+    .footer_form{
+        display: none;
+    }
+
+
+}
+
+
 @media (max-width: 1200px) {
+
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
     .wrapper{
         display: flex;
@@ -914,20 +927,38 @@ header {
     *{
         max-width: 1200px;
     }
+
+    .find_container{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .img-design{
+        display: none;
+    }
+
+    .find_search{
+        display: none;
+    }
+
     .example_table{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
         grid-gap: 30px;
         margin-bottom: 80px;
     }
 
     .locations-table{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         grid-gap: 30px;
         margin-bottom: 80px;
+    }
+
+    .footer > .logo{
+        display: none;
     }
 
     .reviews_table{
@@ -935,6 +966,34 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 32px;
+    }
+
+    .how_it_works_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how_it_works_header-description {
+        margin-bottom: 20px;
+    }
+
+    .how_it_works-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .comfort_section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quick_and_easy_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .blog-table{
@@ -949,13 +1008,32 @@ header {
         justify-content: center;
         gap: 50px;
     }
+
+    .blog_sign{
+        margin-top: 30px;
+    }
+
+
+    .blog-naming{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 80px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .view_button{
+        margin: 0;
+    }
 }
 
 
 
 
 
-@media (max-width: 360px) {
+@media (max-width: 426px) {
     html {
         width: 100%;
         overflow-x: hidden;
@@ -1368,6 +1446,7 @@ header {
     }
 
     .blog_section {
+
         margin-top: 64px;
         padding: 48px 12px;
     }
@@ -1442,8 +1521,10 @@ header {
     }
 
     .blog_section {
+
         padding: 48px 12px;
     }
+
 
     .example_table {
         width: 100%;
@@ -1513,9 +1594,7 @@ header {
         margin-bottom: 0;
     }
 
-    footer {
-        padding: 48px 12px 24px;
-    }
+
 
     .footer > div {
         display: flex;

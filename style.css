@@ -526,7 +526,7 @@ header {
     justify-content: start;
 }
 
-.help{
+.card_body{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -695,6 +695,15 @@ header {
     margin-left: 20px;
 }
 
+.customer_name{
+    font: 700 16px 'Roboto', sans-serif;
+}
+
+.people_role{
+    font: 400 16px 'Roboto', sans-serif;
+    color: #65665C;
+}
+
 .blog_section{
     padding-bottom: 80px;
     background: #F5F5F2;
@@ -750,9 +759,9 @@ header {
 .card-content{
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
+    margin-left: 15px;
     margin-top: 30px;
-    gap: 20px;
+    gap: 5px;
 }
 
 .blog_card-header{
@@ -812,7 +821,96 @@ header {
     align-items: end;
 }
 
+.footer{
+    font: 400 16px 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+
+.footer_info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 385px;
+}
+
+.footer_description{
+    font: 400 16px 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+.footer_input{
+
+}
+
+
+.footer_agreement{
+    font: 400 12px 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+.footer_input_email{
+    font: 400 16px 'Roboto', sans-serif;
+    width: 240px;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px #E7E8E3 solid;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px #E7E8E3
+}
+
+.subscribe_button{
+    font: 400 16px 'Roboto', sans-serif;
+    height: 50px;
+    width: 125px;
+    background-color: #CF6F49;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-bottom-section{
+    background-color: #F5F5F2;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-bottom_text{
+    font: 400 16px 'Roboto', sans-serif;
+    color: #65665C;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.logo_text{
+    font: 700 30px 'Roboto', sans-serif;
+}
+
+
 @media (max-width: 1200px) {
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
     *{
         max-width: 1200px;
     }
@@ -845,6 +943,12 @@ header {
         align-items: center;
         gap: 32px;
     }
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
 }
 
 
@@ -852,17 +956,19 @@ header {
 
 
 @media (max-width: 360px) {
-    html, body {
+    html {
         width: 100%;
         overflow-x: hidden;
     }
 
-    .find_search {
-        display: none;
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        min-width: 360px;
     }
 
-    body {
-        min-width: 360px;
+    .find_search {
+        display: none;
     }
 
     .wrapper {
@@ -906,10 +1012,26 @@ header {
         font-size: 14px;
     }
 
-    .cart_button,
-    .header_find_button,
-    .explore-button,
-    .start-button,
+    .cart_button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .header_find_button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .explore-button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .start-button {
+        width: 100%;
+        max-width: 320px;
+    }
+
     .view_button {
         width: 100%;
         max-width: 320px;
@@ -918,47 +1040,165 @@ header {
     .find_section {
         flex-direction: column;
         align-items: center;
-    }
-
-    .comfort_section,
-    .quick_and_easy_section,
-    .margin,
-    .blog-table,
-    .reviews_table,
-    .how_it_works_header,
-    .how_it_works-cards,
-    .quick_and_easy-cards,
-    .comfort-buttons,
-    .footer,
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .find_section {
-        align-items: center;
         padding: 24px 12px 40px;
         gap: 24px;
     }
 
-    .find_container-content,
-    .find_container,
-    .comfort-content,
-    .quick_and_easy-content,
-    .blog-naming {
+    .comfort_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick_and_easy_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .margin {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        margin-bottom: 32px;
+        gap: 20px;
+    }
+
+    .blog-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews_table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how_it_works_header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how_it_works-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick_and_easy-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comfort-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        gap: 16px;
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .find_container-content {
         width: 100%;
         align-items: center;
         text-align: center;
     }
 
-    .find_title,
-    .comfort_header,
-    .quick_and_easy-header,
-    .example_title,
-    .locations_title,
-    .big_card-title,
-    .reviews_header,
-    .blog_header,
+    .find_container {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .comfort-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quick_and_easy-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog-naming {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        margin-left: 0;
+        gap: 16px;
+    }
+
+    .find_title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .comfort_header {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .quick_and_easy-header {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .example_title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .locations_title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .big_card-title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .reviews_header {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-top: 64px;
+    }
+
+    .blog_header {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
     .how_it_works-header {
         text-align: center;
         font-size: 32px;
@@ -966,22 +1206,60 @@ header {
         max-width: 100%;
     }
 
-    .find_description,
-    .comfort_description,
-    .quick_and_easy-description,
-    .how_it_works-description,
-    .locations_description,
-    .blog_description,
-    .big_card-description,
-    .reviews_description,
-    .how_it_works_header-description {
-
+    .find_description {
         font-size: 16px;
         line-height: 1.5;
         max-width: 100%;
     }
 
+    .comfort_description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .quick_and_easy-description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .how_it_works-description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .locations_description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .blog_description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .big_card-description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .reviews_description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
     .how_it_works_header-description {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100%;
         text-align: center;
     }
 
@@ -996,7 +1274,11 @@ header {
         width: 100%;
     }
 
-    .find_input,
+    .find_input {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .find_button {
         width: 100%;
         max-width: 100%;
@@ -1006,18 +1288,52 @@ header {
         top: 38px;
     }
 
-    .up_img,
-    .down_img,
-    .up_img2,
+    .up_img {
+        display: none;
+    }
+
+    .down_img {
+        display: none;
+    }
+
+    .up_img2 {
+        display: none;
+    }
+
     .down_img2 {
         display: none;
     }
 
-    .find_container-image,
-    .find_container-image img,
-    .img-design,
-    .image,
-    .example_card > img,
+    .find_container-image {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
+    .find_container-image img {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
+    .img-design {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
+    .image {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
+    .example_card > img {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+    }
+
     .blog_card > img {
         width: 100%;
         max-width: 336px;
@@ -1031,41 +1347,85 @@ header {
         gap: 16px;
     }
 
-    .how_it_works,
-    .comfort_section,
-    .quick_and_easy_section,
-    .reviews_section,
-    .blog_section {
-        margin-top: 64px;
-    }
-
     .how_it_works {
+        margin-top: 64px;
         padding: 0 12px;
         gap: 32px;
     }
 
-    .how_it_works-cards,
-    .reviews_table,
-    .blog-table,
-    .quick_and_easy-cards,
+    .comfort_section {
+        margin-top: 64px;
+    }
+
+    .quick_and_easy_section {
+        margin-top: 64px;
+    }
+
+    .reviews_section {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        padding: 0 12px;
+    }
+
+    .blog_section {
+        margin-top: 64px;
+        padding: 48px 12px;
+    }
+
+    .how_it_works-cards {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .reviews_table {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .blog-table {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .quick_and_easy-cards {
+        align-items: center;
+        gap: 16px;
+    }
+
     .comfort-buttons {
         align-items: center;
         gap: 16px;
     }
 
-    .how_it_works-card,
-    .reviews_card,
-    .blog_card,
-    .example_card,
-    .locations_card {
+    .how_it_works-card {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+        padding: 24px 16px;
+    }
+
+    .reviews_card {
+        width: 100%;
+        max-width: 336px;
+        height: auto;
+        padding: 24px 16px;
+    }
+
+    .blog_card {
         width: 100%;
         max-width: 336px;
     }
 
-    .how_it_works-card,
-    .reviews_card {
+    .example_card {
+        width: 100%;
+        max-width: 336px;
         height: auto;
-        padding: 24px 16px;
+        padding-bottom: 20px;
+    }
+
+    .locations_card {
+        width: 100%;
+        max-width: 336px;
     }
 
     .quick_and_easy-card {
@@ -1073,17 +1433,25 @@ header {
         text-align: center;
     }
 
-    .example_section,
-    .locations,
+    .example_section {
+        padding: 48px 12px;
+    }
+
+    .locations {
+        padding: 48px 12px;
+    }
+
     .blog_section {
         padding: 48px 12px;
     }
 
-    .example_title {
+    .example_table {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
         margin-bottom: 32px;
     }
 
-    .example_table,
     .locations-table {
         width: 100%;
         grid-template-columns: 1fr;
@@ -1091,32 +1459,35 @@ header {
         margin-bottom: 32px;
     }
 
-    .example_card {
-        height: auto;
-        padding-bottom: 20px;
-    }
-
     .example_card-icons {
         flex-wrap: wrap;
         gap: 12px;
     }
 
-    .help,
-    .card-content,
-    .locations_card-info,
-    .customer_info,
-    .reviews_stars {
+    .card_body {
         margin-left: 0;
     }
 
-    .card-content{
+    .card-content {
+        margin-left: 0;
         text-align: center;
         align-items: center;
     }
 
     .locations_card-info {
+        margin-left: 0;
         padding: 16px;
         text-align: center;
+    }
+
+    .customer_info {
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .reviews_stars {
+        margin-left: 0;
     }
 
     .big_card-section {
@@ -1129,37 +1500,6 @@ header {
         min-height: auto;
         padding: 32px 16px;
         text-align: center;
-    }
-
-    .reviews_section {
-        margin-bottom: 64px;
-        padding: 0 12px;
-    }
-
-    .reviews_header {
-        margin-top: 64px;
-    }
-
-    .reviews_description {
-        margin-bottom: 32px;
-        text-align: center;
-    }
-
-    .customer_info {
-        width: 100%;
-        align-items: center;
-    }
-
-    .margin {
-        padding-top: 0;
-        margin-bottom: 32px;
-        gap: 20px;
-    }
-
-    .blog-naming {
-        height: auto;
-        margin-left: 0;
-        gap: 16px;
     }
 
     .block_button {
@@ -1177,30 +1517,22 @@ header {
         padding: 48px 12px 24px;
     }
 
-    .footer {
-        display: flex;
-        gap: 24px;
-    }
-
     .footer > div {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    .footer input,
-    .footer button {
+    .footer input {
         width: 100%;
         max-width: 320px;
         height: 44px;
     }
 
-    .footer-bottom {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        text-align: center;
-        margin-top: 24px;
+    .footer button {
+        width: 100%;
+        max-width: 320px;
+        height: 44px;
     }
 
     .social-media {
@@ -1209,3 +1541,4 @@ header {
         justify-content: center;
     }
 }
+
